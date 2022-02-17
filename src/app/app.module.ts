@@ -10,7 +10,6 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { NgToastModule } from 'ng-angular-popup';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { VideoComponent } from './video/video.component';
 
 
 @NgModule({
@@ -18,8 +17,7 @@ import { VideoComponent } from './video/video.component';
     AppComponent,
     DashboardComponent,
     SignupComponent,
-    LoginComponent,
-    VideoComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +26,7 @@ import { VideoComponent } from './video/video.component';
     HttpClientModule,
     NgToastModule,
     BrowserAnimationsModule
+ 
   ],
   providers: [],
   bootstrap: [AppComponent]
