@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
         this.loginForm.reset();
         this.router.navigate(['restaurent'])
       }else{
-        this.toast.error({detail:"error message", summary:"login failed", duration:3000})
+        this.toast.error({detail:"error message", summary:"invalid email/password", duration:4000})
       }
     },err=>{
       alert("server error........")

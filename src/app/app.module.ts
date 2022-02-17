@@ -10,6 +10,13 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { NgToastModule } from 'ng-angular-popup';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { VideoComponent } from './video/video.component';
+import {MatBadgeModule} from '@angular/material/badge';
+import { MatButtonModule } from '@angular/material/button';
+import { YouTubePlayerModule } from '@angular/youtube-player';
+
+
+
 
 
 @NgModule({
@@ -17,7 +24,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     DashboardComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    VideoComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +33,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     HttpClientModule,
     NgToastModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatBadgeModule,
+    MatButtonModule,
+    YouTubePlayerModule
  
   ],
   providers: [],

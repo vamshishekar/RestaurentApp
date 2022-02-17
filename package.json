@@ -21,6 +21,7 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "@angular/youtube-player": "^13.2.3",
     "json-server": "^0.17.0",
     "mat-video": "^2.8.1",
     "ng-angular-popup": "0.0.4",
