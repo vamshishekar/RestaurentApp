@@ -25,20 +25,12 @@
       "service": "burger"
     },
     {
-      "id": 6,
-      "name": "ssf",
-      "email": "sfsf@mn.com",
-      "mobile": "124",
-      "address": "wfgw3",
-      "service": "biryani"
-    },
-    {
-      "id": 7,
+      "id": 4,
       "name": "polo",
       "email": "polo@g.com",
-      "mobile": "12345",
-      "address": "qwerty qwerty",
-      "service": "gobi, panipuri"
+      "mobile": "345678",
+      "address": "qwerty",
+      "service": "self"
     }
   ],
   "signup": [
@@ -49,7 +41,6 @@
       "password": "123",
       "id": 1
     },
-  
     {
       "name": "vams",
       "mobile": "12345",

@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgToastService } from 'ng-angular-popup';
+
 
 @Component({
   selector: 'app-login',
@@ -11,7 +13,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   @ViewChild('email') namekey!: ElementRef;
   loginForm!: FormGroup
-  constructor(private formBuilder:FormBuilder, private http:HttpClient, private router:Router) { }
+  constructor(private formBuilder:FormBuilder, private http:HttpClient, private router:Router, private toast:NgToastService) { }
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -33,10 +35,11 @@ export class LoginComponent implements OnInit {
         return abc.email === this.loginForm.value.email && abc.password === this.loginForm.value.password
       })
       if(checkuser){
+        this.toast.success({detail:"success message", summary:"login success", duration:3000})
         this.loginForm.reset();
         this.router.navigate(['restaurent'])
       }else{
-        alert("user not found")
+        this.toast.error({detail:"error message", summary:"login failed", duration:3000})
       }
     },err=>{
       alert("server error........")
