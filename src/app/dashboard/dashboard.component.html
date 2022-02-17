@@ -1,0 +1,106 @@
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+      <div class="container-fluid">
+        <h5>RESTAURENT RECORD APP</h5>
+      </div>
+          <span>Hello: {{displaying}}</span>&nbsp;
+        <button (click)="clickAddResto()" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">ADD RESTAURENT</button>&nbsp;
+    
+      
+      <button routerLink="/login" type="button" class="btn btn-danger btn-lg">Logout</button>
+     
+    </nav>
+
+
+ <!-- jumbotron -->
+<div class="jumbotron p-5 bg-light">
+  <h1 class="display-4">RESTAURENT RECORD APP</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" target="blank" href="https://www.lipsum.com/" role="button">Learn more</a>
+  </p>
+</div>
+
+
+<!-- table-starts-here -->
+<table class="table mt-4">
+    <thead>
+        <tr>
+            <th scope="col">RESTAURENT ID</th>
+            <th scope="col">NAME</th>
+            <th scope="col">EMAIL</th>
+            <th scope="col">MOBILE</th>
+            <th scope="col">ADDRESS</th>
+            <th scope="col">SERVICE</th>
+            <th scope="col">ACTION</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let adding of backendData">
+           <td>{{adding.id}}</td>
+           <td>{{adding.name}}</td>
+           <td>{{adding.email}}</td>
+           <td>{{adding.mobile}}</td>
+           <td>{{adding.address}}</td>
+           <td>{{adding.service}}</td>
+            <td>
+                <button  type="button" (click)="onEdit(adding)" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">EDIT</button>&nbsp;
+                <button type="button" (click)="deleteResto(adding)" class="btn btn-danger">DELETE</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+<!-- modal -->
+<!-- Button trigger modal -->
+<!-- <button >
+    Launch demo modal
+  </button> -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="formValue" >
+                <div class="mb-3">  
+                    <label  class="form-label">NAME</label>
+                    <input type="text" formControlName="name" class="form-control"  >
+                  </div>
+                <div class="mb-3">  
+                  <label  class="form-label">Email address</label>
+                  <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">  
+                    <label class="form-label">MOBILE</label>
+                    <input type="text" formControlName="mobile" class="form-control"  >
+                  </div>
+                  <div class="mb-3">  
+                    <label class="form-label">ADDRESS</label>
+                    <input type="text" formControlName="address" class="form-control"  >
+                  </div>
+                  <div class="mb-3">  
+                    <label  class="form-label">SERVICE</label>
+                    <input type="text" formControlName="service" class="form-control"  >
+                  </div>
+               
+              
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button *ngIf="showAdd" type="button" class="btn btn-primary" (click)="addResto()">ADD DETAILS</button>
+          <button *ngIf="showUpdate" type="button" class="btn btn-primary" (click)="updateRestodata()">UPDATE DETAILS</button>
+        </div>
+      </div>
+    </div>
+  </div>

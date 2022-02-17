@@ -1,0 +1,78 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "taj",
+      "email": "taj@g.com",
+      "mobile": "12345",
+      "address": "qwerty",
+      "service": "biryani"
+    },
+    {
+      "id": 2,
+      "name": "\tvamsh\t\t\t\t",
+      "email": "vam@gmail.com",
+      "mobile": "123456789",
+      "address": "qwerty qwerty",
+      "service": "tea & coffee"
+    },
+    {
+      "id": 3,
+      "name": "ram",
+      "email": "ram@gmail.com",
+      "mobile": "1234567890",
+      "address": "qwerty",
+      "service": "burger"
+    },
+    {
+      "id": 6,
+      "name": "ssf",
+      "email": "sfsf@mn.com",
+      "mobile": "124",
+      "address": "wfgw3",
+      "service": "biryani"
+    },
+    {
+      "id": 7,
+      "name": "polo",
+      "email": "polo@g.com",
+      "mobile": "12345",
+      "address": "qwerty qwerty",
+      "service": "gobi, panipuri"
+    }
+  ],
+  "signup": [
+    {
+      "name": "vam",
+      "mobile": "34566",
+      "email": "vam@g.com",
+      "password": "123",
+      "id": 1
+    },
+  
+    {
+      "name": "vams",
+      "mobile": "12345",
+      "email": "vams@g.com",
+      "password": "12345",
+      "id": 3
+    },
+    {
+      "name": "vams",
+      "mobile": "12345",
+      "email": "vams@g.com",
+      "password": "12345",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

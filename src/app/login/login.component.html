@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card text-center">
+                     <h2>login into restaurent app</h2>
+                </div>
+                  <hr>
+
+                    <form [formGroup]="loginForm" (ngSubmit)="newlogIn(); copyName()">
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                          <input  #email formControlName="email" type="email"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                         <div class="text-danger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">*Email Id is required</div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                          <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+                          <div class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*password Id is required</div>
+                        </div>
+                        
+                        <button type="submit" [disabled]="!loginForm.valid" (click)="copyName()" class="btn btn-primary">login</button>
+                      </form>
+
+                <a routerLink="/signup">New user ? click to signup !</a>
+            </div>
+        </div>
+    </div>
+</div>
