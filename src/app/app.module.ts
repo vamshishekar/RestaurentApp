@@ -14,6 +14,14 @@ import { VideoComponent } from './video/video.component';
 import {MatBadgeModule} from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import { TestComponent } from './dashboard/test/test.component';
+import { MatCardModule} from '@angular/material/card';
+import {MatMenuModule} from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogAnimationsExampleDialogComponent } from './dashboard/test/dialog-animations-example-dialog/dialog-animations-example-dialog.component';
+
+
 
 
 
@@ -25,7 +33,9 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     DashboardComponent,
     SignupComponent,
     LoginComponent,
-    VideoComponent
+    VideoComponent,
+    TestComponent,
+    DialogAnimationsExampleDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +46,16 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     BrowserAnimationsModule,
     MatBadgeModule,
     MatButtonModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatDialogModule
+   
+    
+
+  
+    
  
   ],
   providers: [],

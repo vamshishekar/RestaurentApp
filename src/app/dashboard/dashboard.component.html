@@ -2,6 +2,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
       <div class="container-fluid">
         <h5>RESTAURENT RECORD APP</h5>
+        <span> <a href="#" routerLink="/test" style="color: black;" >Test</a> </span>
         <span> <a href="#" routerLink="/video" style="color: black;" >video</a> </span>
       </div>
           <span>Hello:{{displaying}}</span>&nbsp;
@@ -48,6 +49,7 @@
            <td>{{adding.address}}</td>
            <td>{{adding.service}}</td>
             <td>
+                
                 <button  type="button" (click)="onEdit(adding)" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">EDIT</button>&nbsp;
                 <button type="button" (click)="deleteResto(adding)" class="btn btn-danger">DELETE</button>
             </td>
